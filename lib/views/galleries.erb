@@ -1,0 +1,30 @@
+<style >
+
+h1 
+{
+ margin-left: 200px; 
+}
+table,th,td
+{
+text-align: left;
+border:1px solid black;
+}
+</style>
+<h1>Galleries</h1>
+<table style="width:500px">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+      <% @galleries.each do |gallery| %> 
+  <tr>
+    <td><%= gallery["id"] %></td>
+    <td><%= gallery["name"] %></td>
+  </tr>
+    <% end %>
+
+</table>
+
+
+
+

@@ -1,0 +1,36 @@
+
+
+<table class="table table-striped" width="647">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>URL</th>
+    <th>Exhibitions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+       <tr> 
+        <% @galleries.each do |gallery| %> 
+        <td><%= gallery["id"] %></td>
+        <td><%= gallery["name"] %></td>
+        <td> <% gallery["url"] %></td>
+        <td> <% gallery["exhibitions"] %></td>
+       <% end %>
+       </tr>
+
+    
+  </tbody>
+</table>
+
+    
+    </div>   
+    </div>
+
+</body>
+
+
+</html>

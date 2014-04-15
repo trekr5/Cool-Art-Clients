@@ -12,4 +12,9 @@ get "/galleries" do
    erb :galleries
 end
 
+get "/galleries/:id" do
+   @gallery = PickledShark::Gallery.get_gallery(params[:id])
+   erb :gallery
+end
+
 end

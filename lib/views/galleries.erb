@@ -18,8 +18,15 @@ border:1px solid black;
   </tr>
       <% @galleries.each do |gallery| %> 
   <tr>
-    <td><%= gallery["id"] %></td>
-    <td><%= gallery["name"] %></td>
+    <td>
+
+      <%= gallery["id"] %>
+    </td>
+    <td>
+      <a href="/galleries/<%= gallery["id"] %>">
+        <%= gallery["name"] %>
+      </a>
+    </td>
   </tr>
     <% end %>
 

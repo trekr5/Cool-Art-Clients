@@ -7,4 +7,6 @@ group :test, :development do
   gem 'rspec'
   gem 'shotgun'
 
+  gem 'rack-test'
+
 end

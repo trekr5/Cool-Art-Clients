@@ -1,9 +1,18 @@
-<%= @gallery["id"] %><br>
-<%= @gallery["name"] %><br>
-<%= @gallery["description"] %><br>
-<%= @gallery["address"] %><br>
-<%= @gallery["opening_hour"] %>
-<%= @gallery["closing_hour"] %>
+<!DOCTYPEhtml>
+<html>
+    <head>
+        
+    <title> Gallery </title>    
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+     <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    </head>
+
+<h1><%= @gallery["name"] %></h1><br>
+<p><%= @gallery["description"] %></p>
+<address><%= @gallery["address"] %></address><br>
+<p>We are open from <%= @gallery["opening_hour"] %> until <%= @gallery["closing_hour"] %>.</p>
 
 <br><br>
 <a href="/galleries">

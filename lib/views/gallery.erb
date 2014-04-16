@@ -2,14 +2,23 @@
 <html>
     <head>
         
-    <title> Gallery </title>    
+    <title> Galleries </title>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-     <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+      <link href="/css/test.css" rel="stylesheet" type="text/css">
+  
     </head>
 
-<h1><%= @gallery["name"] %></h1><br>
+
+
+
+<div class="hero-unit">
+<h1>Gallery</h1>
+</div>
+
+<h2><%= @gallery["name"] %></h2><br>
 <p><%= @gallery["description"] %></p>
 <address><%= @gallery["address"] %></address><br>
 <p>We are open from <%= @gallery["opening_hour"] %> until <%= @gallery["closing_hour"] %>.</p>

@@ -1,33 +1,39 @@
-<style >
-body {
-  background-color: #;
-}
-h1 
-{
- margin-left: 100px; 
-}
-table,th,td
-{
-text-align: left;
-margin-left: 100px;
-font-size: 18px;
-font-family: Arial;
+<!DOCTYPEhtml>
+<html>
+    <head>
+        
+    <title> Galleries </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+     <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+     <link href="css/test.css" rel="stylesheet" type="text/css">
+    </head>
 
-}
 
-</style>
+
+
+<div class="hero-unit">
 <h1>Galleries</h1>
+</div>
+
+
 <table style="width:500px">
+  
 
       <% @galleries.each do |gallery| %> 
   <tr>
     <td>
+      
       <a href="/galleries/<%= gallery["id"] %>">
         <%= gallery["name"] %>
       </a>
+    
     </td>
   </tr>
     <% end %>
+  
+  
 
 </table>
 

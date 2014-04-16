@@ -8,12 +8,29 @@ h1 {
 table,th,td
 {
 text-align: left;
-margin-left: 100px;
+margin-left: 570px;
 font-size: 18px;
 font-family: Arial;
 
 
 
+}
+
+.stuff
+{
+
+   padding-left: 60px;
+   /*text-align: center;*/
+}
+
+h2.stuff {
+
+	font-size: 17px;
+}
+
+a {
+
+  padding-left: 60px;
 }
 
 

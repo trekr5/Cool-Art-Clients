@@ -2,7 +2,7 @@
 <html>
     <head>
         
-    <title> Galleries </title>    
+    <title> Cool Art Client</title>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -17,16 +17,18 @@
 <div class="hero-unit">
 <h1>Gallery</h1>
 </div>
-
+<div class="stuff">
 <h2><%= @gallery["name"] %></h2><br>
+
 <p><%= @gallery["description"] %></p>
 <address><%= @gallery["address"] %></address><br>
 <p>We are open from <%= @gallery["opening_hour"] %> until <%= @gallery["closing_hour"] %>.</p>
+</div>
 
-<br><br>
+<br>
 <a href="/galleries/<%= @gallery["id"] %>/exhibitions">
-      Exhibitions </a>
+      Exhibitions </a> at this gallery
 
-<br><br>
+<br><br><br><br><br><br><br><br><br>
 <a href="/galleries">
       Back </a>

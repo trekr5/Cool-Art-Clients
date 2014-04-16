@@ -2,7 +2,7 @@
 <html>
     <head>
         
-    <title> Galleries </title>    
+    <title> Cool Art Client</title>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -24,13 +24,16 @@
       <% @galleries.each do |gallery| %> 
   <tr>
     <td>
-      
+      <br>
       <a href="/galleries/<%= gallery["id"] %>">
         <%= gallery["name"] %>
       </a>
+      <br>
+
     
     </td>
   </tr>
+
     <% end %>
   
   

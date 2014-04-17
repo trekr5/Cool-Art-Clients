@@ -12,24 +12,25 @@
     </head>
 
     <div class="hero-unit">
-<h1> Success! You have just bought your ticket</h1>
+<h1> Show Ticket</h1>
 </div>
 
-<h3> Your ticket is: </h3>
-
-  
-  <%= @ticket["name"] %>
-  <%= @ticket["entry_at"] %>
-  <%= @ticket["id"] %>
-
+<div class="ticket" >
 
  <!-- Default action for a form is the POST action -->
-<form method='post' action='/exhibitions/<%= params[:exhibition_id] %>/tickets/<%= @ticket["id"] %>'>
+<form method='post' action='/exhibitions/<%= params[:exhibition_id] %>/tickets/<%= params[:id] %>'>
+  
+  <label>
+    <span class="form-label">Ticket id</span>
+    <input type='text' placeholder="Name" name='ticket id' value="<%= params[:id] %>">
+  </label>
+
   
    <input type="hidden" name="_method" value="delete">
 
 
-  <button type='submit'>Delete</button>
+  <button type='submit'>Submit</button>
 
 </form>
 
+</div>

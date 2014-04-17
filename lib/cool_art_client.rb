@@ -4,6 +4,8 @@ require 'pickled_shark'
 
 class CoolArtClient < Sinatra::Base
 
+  set :method_override, true
+
   get "/" do 
     erb :index
   end
@@ -29,7 +31,6 @@ class CoolArtClient < Sinatra::Base
     erb :create_ticket
   end
 
-
   post "/exhibitions/:exhibition_id/tickets" do
     #raise params.inspect
     @ticket = PickledShark::Ticket.create(name: params[:name], exhibition_id: params[:exhibition_id], entry_at: params[:entry_at])
@@ -41,8 +42,12 @@ class CoolArtClient < Sinatra::Base
     else
       erb :create_ticket
     end
-    
+  end
 
+  delete  "/exhibitions/:exhibition_id/tickets/:id" do 
+    @remove = PickledShark::Ticket.delete(params[:id])
+
+    erb :delete_ticket
   end 
 
 

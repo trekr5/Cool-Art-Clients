@@ -12,24 +12,5 @@
     </head>
 
     <div class="hero-unit">
-<h1> Success! You have just bought your ticket</h1>
+<h1> Deleted Ticket</h1>
 </div>
-
-<h3> Your ticket is: </h3>
-
-  
-  <%= @ticket["name"] %>
-  <%= @ticket["entry_at"] %>
-  <%= @ticket["id"] %>
-
-
- <!-- Default action for a form is the POST action -->
-<form method='post' action='/exhibitions/<%= params[:exhibition_id] %>/tickets/<%= @ticket["id"] %>'>
-  
-   <input type="hidden" name="_method" value="delete">
-
-
-  <button type='submit'>Delete</button>
-
-</form>
-

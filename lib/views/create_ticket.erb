@@ -1,0 +1,37 @@
+<!DOCTYPEhtml>
+<html>
+    <head>
+        
+    <title> Cool Art Client</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+      <link href="/css/test.css" rel="stylesheet" type="text/css">
+  
+    </head>
+
+    <div class="hero-unit">
+<h1> Ticket Form </h1>
+</div>
+
+<div class="ticket" >
+
+
+<form role="form" action="exhibition/<%= params[:exhibition_id] %>/tickets">
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name of ticketholder">
+  </div>
+  <div class="form-group">
+    <label for="entry">Entry At</label>
+    <input type="text" class="form-control" id="entry" placeholder="Entry at">
+  </div>
+
+  <br>
+  
+  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+  
+</form>
+</div>

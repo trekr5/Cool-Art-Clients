@@ -34,11 +34,23 @@ a {
 }
 
 
-p.enter {
+.enter {
 
-padding-left: 600px;
+padding-left: 680px;
+/*height: 50px;
+width: 800px;*/
 
 }
+
+.home {
+
+padding-left: 630px;
+/*height: 50px;
+width: 800px;*/
+
+}
+
+
 
 
 

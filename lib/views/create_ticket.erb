@@ -17,21 +17,24 @@
 
 <div class="ticket" >
 
+ <!-- Default action for a form is the POST action -->
+<form method='post' action='/exhibitions/<%= params[:exhibition_id] %>/tickets'>
+  
+  <label>
+    <span class="form-label">Name</span>
+    <input type='text' placeholder="Name" name='name' value="<%= params[:name] %>">
+  </label>
 
-<form role="form" action="exhibition/<%= params[:exhibition_id] %>/tickets">
+   <label>
+    <span class="form-label">Entry At</span>
+    <input type='text' placeholder="Entry At" name='entry_at' value="<%= params[:entry_at] %>">
+  </label>
   
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" placeholder="Enter Name of ticketholder">
-  </div>
-  <div class="form-group">
-    <label for="entry">Entry At</label>
-    <input type="text" class="form-control" id="entry" placeholder="Entry at">
-  </div>
+   <input type="hidden" name="exhibition_id" value="<%= params[:exhibition_id] %>">
 
-  <br>
-  
-  <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-  
+
+  <button type='submit'>Submit</button>
+
 </form>
+
 </div>

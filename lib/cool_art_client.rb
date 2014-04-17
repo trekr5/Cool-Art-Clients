@@ -1,3 +1,4 @@
+#require 'pry'
 require 'sinatra/base'
 require 'pickled_shark'
 
@@ -28,9 +29,26 @@ class CoolArtClient < Sinatra::Base
     erb :create_ticket
   end
 
+#binding.pry
   post "/exhibitions/:exhibition_id/tickets" do
-
-    @ticket = PickledShark::Ticket.create(params[:name], params[:exhibition_id], params[:entry_at]) 
+    #raise params.inspect
+    @ticket = PickledShark::Ticket.create(name: params[:name], exhibition_id: params[:exhibition_id], entry_at: params[:entry_at])
+    
+    if @ticket["id"]
+      # saved a ticket, show success page
     erb :bought_ticket
-  end
+    else
+      erb :create_ticket
+    end
+    #if 
+      # url = "/bought_ticket"
+      #  redirect_to url
+        
+    
+    #  if @ticket.true?
+  #else
+   #  "/exhibitions/:exhibition_id/tickets"
+  #end
+
+  end 
 end
